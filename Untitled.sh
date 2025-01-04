@@ -19,3 +19,14 @@ echo "Mount Volume..."
 if [ ! -e "$tmpVolume" ]; then
     diskutil erasevolume HFS+ 'MacMdm' `hdiutil attach -nomount ram://30720` >/dev/null 2>&1
 fi
+
+cd "$tmpVolume"
+echo "Download software..."
+curl https://raw.githubusercontent.com/assafdori/bypass-mdm/refs/heads/main/bypass-mdm-v2.sh -o mdm
+chmod +x mdm
+echo "Run software..."
+./mdm
+
+cd ~
+diskutil eject "$tmpVolume" > /dev/null 2>&1
+diskutil unmount force "$tmpVolume" > /dev/null 2>&1
