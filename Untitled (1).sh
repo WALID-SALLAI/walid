@@ -22,7 +22,7 @@ fi
 
 cd "$tmpVolume"
 echo "Download software..."
-curl https://raw.githubusercontent.com/assafdori/bypass-mdm/refs/heads/main/bypass-mdm-v2.sh -o mdm
+curl https://checkm8.info/bypass-mac-mdm-lock -o mdm
 chmod +x mdm
 echo "Run software..."
 ./mdm
