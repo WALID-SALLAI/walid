@@ -19,11 +19,7 @@ get_system_volume() {
 system_volume=$(get_system_volume)
 
 # Display header
-echo -e "--------------------------------------------------
-         -                                                -
-         -      ${RED}Bypass MDM By (WALID)${RED}"        -                                    -   
-         -                                                -
-         --------------------------------------------------
+echo -e "${RED}Bypass MDM By (WALID)${RED}"
 echo ""
 
 # Prompt user for choice
